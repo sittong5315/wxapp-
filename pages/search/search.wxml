@@ -1,0 +1,2 @@
+<!--pages/search/search.wxml-->
+<open-data type="userAvatarUrl"></open-data>

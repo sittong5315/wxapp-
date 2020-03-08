@@ -1,0 +1,13 @@
+<!--pages/home/home.wxml-->
+<view class="wrap">
+  <scroll-view wx:if="{{toLast}}" scroll-y class="con" scroll-with-animation scroll-into-view="{{toLast}}">
+    <view wx:for="{{list}}" class="{{item.className}}" wx:key="*this" id="item{{index+1}}">
+      <image src="../../img/{{item.img}}.jpg"></image>
+      <view class="text">{{item.msg}}</view>
+    </view>
+  </scroll-view>
+  <view class="send">
+    <input bindinput="input" placeholder="请输入您想发送的内容" type="text" scroll-top="0" confirm-type="send"></input>
+    <button bindtap="userSend" type="primary">发送</button>
+  </view>
+</view>
