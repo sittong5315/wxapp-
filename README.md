@@ -2,7 +2,7 @@
 
 使用图灵api来实现聊天功能
 
-<img src=" https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151317463.png "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151317463.png)
 
 # 查询
 
@@ -16,18 +16,25 @@
 
 ### 疫情查询
 
-<img src="  https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151337774.png  "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151337774.png)
 
-<img src="   https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151932204.png   "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151932204.png)
+
+
 
 ### 星座运势
 
-<img src="   https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151557773.png   "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151557773.png)
+
+
 
 ### 猜拳游戏
 
-<img src="    https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151622460.png    "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151622460.png    )
+
+
 
 ### 快递查询
 
-<img src="   https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151640171.png    "></img>
+![image-20200312151337774](https://raw.githubusercontent.com/sittong5315/wxapp-/sittong5315-patch-1/image-20200312151640171.png)
+
