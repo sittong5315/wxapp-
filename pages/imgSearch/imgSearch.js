@@ -1,32 +1,36 @@
-// pages/search/search.js
+// pages/imgSearch/imgSearch.js
 Page({
-  toImgSearch(){
-    wx.navigateTo({
-      url: '../imgSearch/imgSearch',
+
+  input(e){
+    var input = e.detail.value
+    this.setData({
+      input
     })
   },
-  toXG(){
-    wx.navigateTo({
-      url: '../xg/xg',
-    })
-  },
-  toConstellation(){
-    wx.navigateTo({
-      url: '../constellation/constellation',
-    })
-  },
-  toGame(){
-    wx.navigateTo({
-      url: '../guess/guess',
-    })
-  },
-  toList(){
-    wx.navigateTo({
-      url: '../toDolist/toDolist',
+  search(){
+    var that = this
+    wx.request({
+      url: 'https://www.tuling123.com/openapi/api',
+      data: {
+        key: '854c8d93815949f68bc63e90886c4ede',
+        info: '查快递'+this.data.res,
+        userid: '547624'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log(res)
+        var res = res.data.text
+        that.setData({
+          res
+        })
+      }
     })
   },
   data: {
-
+    input:'',
+    res:''
   },
 
   /**

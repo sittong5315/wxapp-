@@ -1,0 +1,32 @@
+/* pages/toDolist/toDolist.wxss */
+
+.item {
+  padding: 20rpx 120rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  min-height: 120rpx;
+  line-height: 80rpx;
+  position: relative;
+  border-top: none;
+}
+
+.radio {
+  padding: 0;
+  position: absolute;
+  left: 0rpx;
+  top: 50%;
+  margin-top: -45rpx;
+}
+
+.radio-index {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.del {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  margin-top: -45rpx;
+}

@@ -1,0 +1,4 @@
+<!--AddButton/addbutton.wxml-->
+<view class="addbutton" bindtap="onClick">
+  <i-icon class="add-icon" size="26" color="#ffffff" type="add" />
+</view>

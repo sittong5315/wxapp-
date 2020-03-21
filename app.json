@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/user/user",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/finish/finish",
+    "pages/constellation/constellation",
+    "pages/imgSearch/imgSearch",
+    "pages/guess/guess",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,12 +29,6 @@
         "text": "聊天",
         "iconPath": "icons/msg.png",
         "selectedIconPath": "icons/msg2.png"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "text": "我的",
-        "iconPath": "icons/user.png",
-        "selectedIconPath": "icons/user2.png"
       }
     ]
   },

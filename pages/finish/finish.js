@@ -1,30 +1,9 @@
-// pages/search/search.js
+// pages/finish/finish.js
 Page({
-  toImgSearch(){
-    wx.navigateTo({
-      url: '../imgSearch/imgSearch',
-    })
-  },
-  toXG(){
-    wx.navigateTo({
-      url: '../xg/xg',
-    })
-  },
-  toConstellation(){
-    wx.navigateTo({
-      url: '../constellation/constellation',
-    })
-  },
-  toGame(){
-    wx.navigateTo({
-      url: '../guess/guess',
-    })
-  },
-  toList(){
-    wx.navigateTo({
-      url: '../toDolist/toDolist',
-    })
-  },
+
+  /**
+   * 页面的初始数据
+   */
   data: {
 
   },

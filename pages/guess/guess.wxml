@@ -1,0 +1,29 @@
+<!--pages/guess/guess.wxml-->
+<view class="guess">
+  <view class="title">你已经赢了
+    <text class="victorynum">{{victorynum}}</text>次</view>
+  <view class="guessimg">
+    <image src="{{youimg}}"></image>
+    <text>VS</text>
+    <image src="{{myimg}}"></image>
+    <view class="vicmsg">
+      <text>{{vicmsg}}</text>
+    </view>
+  </view>
+
+  <view class="myguess">
+    <view class="tip">出拳吧！少年</view>
+    <view class="myquan">
+      <view wx:for="{{img}}" wx:key="*this">
+        <image src="{{item}}" bindtap="changeImg" mark:i="{{index}}"></image>
+      </view>
+    </view>
+    <view>
+      <button class="btn" bindtap="playagain">再来一次</button>
+    </view>
+    <view>
+      <button class="btn" bindtap="goback">返回</button>
+    </view>
+  </view>
+
+</view>

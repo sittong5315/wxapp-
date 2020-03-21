@@ -1,0 +1,26 @@
+<!--pages/constellation/constellation.wxml-->
+<view class="wrap">
+  <image class="bg" src="../../img/bg.jpg"></image>
+  <view class="section">
+    <view class="section__title"></view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{constellation}}">
+      <view class="picker">
+        {{constellation[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title"></view>
+    <picker bindchange="bindDateChange" value="{{dIndex}}" range="{{date}}">
+      <view class="picker">
+        {{date[dIndex]}}
+      </view>
+    </picker>
+  </view>
+  <button bindtap="search">查询</button>
+  <view class="con" wx-if="{{sw}}">
+    <image class="bg2" src="../../img/res.png"></image>
+    <view class="res">{{res}}</view>
+    <view class="load" wx-if="{{loadSw}}">加载中···</view>
+  </view>
+</view>

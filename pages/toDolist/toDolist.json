@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-radio": "../../dist/radio/index",
+    "i-icon": "../../dist/icon/index",
+    "i-modal": "../../dist/modal/index",
+    "i-panel": "../../dist/panel/index",
+    "i-input": "../../dist/input/index",
+    "addbutton": "../../AddButton/addbutton"
+  }
+}

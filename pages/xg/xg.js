@@ -1,41 +1,39 @@
-// pages/search/search.js
+// pages/xg/xg.js
 Page({
-  toImgSearch(){
+
+  toDetail(e){
+    console.log(e.currentTarget.dataset.i)
+    var i = e.currentTarget.dataset.i
     wx.navigateTo({
-      url: '../imgSearch/imgSearch',
-    })
-  },
-  toXG(){
-    wx.navigateTo({
-      url: '../xg/xg',
-    })
-  },
-  toConstellation(){
-    wx.navigateTo({
-      url: '../constellation/constellation',
-    })
-  },
-  toGame(){
-    wx.navigateTo({
-      url: '../guess/guess',
-    })
-  },
-  toList(){
-    wx.navigateTo({
-      url: '../toDolist/toDolist',
+      url: '../detail/detail?i='+i,
     })
   },
   data: {
-
+    list:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    wx.request({
+      url: 'https://api.tianapi.com/txapi/ncovcity/index',
+      data: {
+        key: '4576f51aa11fa1d11d45606868044bd1'
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res){
+        var list = res.data.newslist
+        that.setData({
+          list
+        })
+        console.log(that.data.list)
+      }
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

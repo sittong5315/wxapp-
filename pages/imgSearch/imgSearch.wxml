@@ -1,0 +1,13 @@
+<!--pages/imgSearch/imgSearch.wxml-->
+<view class="wrap">
+<view class="top">查询结果</view>
+<view class="line">————————————————</view>
+<view class="con">
+  <text>{{res}}</text>
+</view>
+<view class="search">
+  <input bindinput="input" placeholder="输入你想要查询的物流"></input>
+  <view class="btn" bindtap="search">查询</view>
+</view>
+  
+</view>

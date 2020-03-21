@@ -1,8 +1,11 @@
 <!--pages/home/home.wxml-->
 <view class="wrap">
+  <view class="userBtn" wx-if="{{user}}">
+    <button open-type="getUserInfo" bindtap="getUserInf">开始聊天吧</button>
+  </view>
   <scroll-view wx:if="{{toLast}}" scroll-y class="con" scroll-with-animation scroll-into-view="{{toLast}}">
     <view wx:for="{{list}}" class="{{item.className}}" wx:key="*this" id="item{{index+1}}">
-      <image src="../../img/{{item.img}}.jpg"></image>
+      <image src="{{item.img}}"></image>
       <view class="text">{{item.msg}}</view>
     </view>
   </scroll-view>

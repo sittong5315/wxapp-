@@ -1,2 +1,15 @@
 <!--pages/search/search.wxml-->
-<open-data type="userAvatarUrl"></open-data>
+<view class="wrap">
+  <view class="top">
+    <image class="robotImg" src="../../img/robot.jpg"></image>
+    <view class="msg1">在下肠胃猫，有什么可帮助你的吗？</view>
+  </view>
+  <view class="con">
+     <button bindtap="toList">待办事项</button>
+    <button bindtap="toConstellation">星座运势</button>
+    <button bindtap="toGame">猜拳游戏</button>
+    <button bindtap="toXG">疫情查询</button>
+    <button bindtap="toImgSearch">快递查询</button>
+    <button>更多功能开发中</button>
+  </view>
+</view>

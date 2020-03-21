@@ -1,0 +1,15 @@
+<!--pages/xg/xg.wxml-->
+<view class="wrap">
+  <i-row class="title">
+    <i-col span="9" i-class="col-class">地区</i-col>
+    <i-col span="5" i-class="col-class">累计确诊</i-col>
+    <i-col span="5" i-class="col-class">治愈</i-col>
+    <i-col span="5" i-class="col-class">死亡</i-col>
+  </i-row>
+  <i-row class="item" wx:for="{{list}}" wx:key="index" bindtap="toDetail" data-i="{{index}}">
+    <i-col span="9" i-class="col-class first">{{item.provinceName}}</i-col>
+    <i-col span="5" i-class="col-class second">{{item.confirmedCount}}</i-col>
+    <i-col span="5" i-class="col-class first green">{{item.curedCount}}</i-col>
+    <i-col span="5" i-class="col-class second red">{{item.deadCount}}</i-col>
+  </i-row>
+</view>

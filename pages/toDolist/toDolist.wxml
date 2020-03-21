@@ -1,0 +1,15 @@
+<!--pages/toDolist/toDolist.wxml-->
+<addbutton bindclick="add" />
+<view class="con">
+  <view class="item" wx:for="{{list}}" wx:key="index">
+    <i-radio class="radio" checked="{{item.done}}" bindchange="handleThingsChange" data-i="{{index}}">
+    </i-radio>
+    <text>{{item.msg}}</text>
+    <i-icon class="del" type="trash" size="30" bindtap="del" data-i="{{index}}"/>
+  </view>
+</view>
+<i-modal title="添加待办事项" visible="{{ visible1 }}" bind:ok="handleAdd" bind:cancel="handleClose">
+  <i-panel>
+    <i-input value="{{ input }}" maxlength="100" bind:change="input"/>
+  </i-panel>
+</i-modal>

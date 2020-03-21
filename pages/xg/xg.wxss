@@ -1,0 +1,32 @@
+/* pages/xg/xg.wxss */
+.wrap{
+  text-align: center;
+}
+.title{
+  font-weight: bold;
+}
+.col-class{
+  padding: 5rpx;
+}
+.title .col-class{
+  background: #757575;
+  color: #fff;
+}
+.first{
+  background-color: #0288D1;
+  color: #fff;
+  border-bottom:2rpx solid #ccc;
+    font-weight: bold;
+}
+.second{
+  background: #B3E5FC;
+  font-weight: bold;
+}
+.red{
+  color: red;
+  font-weight: bold;
+}
+.green{
+
+  font-weight: bold;
+}

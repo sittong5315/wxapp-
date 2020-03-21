@@ -3,11 +3,11 @@ Page({
   res() {
     var _this = this
     wx.request({
-      url: 'http://www.tuling123.com/openapi/api',
+      url: 'https://www.tuling123.com/openapi/api',
       data: {
-        key:'854c8d93815949f68bc63e90886c4ede',
-        info:this.data.userInput,
-        userid:'547624'
+        key: '854c8d93815949f68bc63e90886c4ede',
+        info: this.data.userInput,
+        userid: '547624'
       },
       header: {
         'content-type': 'application/json'
@@ -16,7 +16,7 @@ Page({
         var msg = res.data.text
         var obj = {
           className: 'robot',
-          img: 'robot',
+          img: '../../img/robot.jpg',
           msg
         }
         var list = _this.data.list
@@ -31,14 +31,15 @@ Page({
   userSend() {
     var obj = {
       className: 'user',
-      img: 'user',
+      img: this.data.userImg,
       msg: this.data.userInput
     }
     var list = this.data.list
     list.push(obj)
     this.setData({
       list,
-      toLast: 'item' + this.data.list.length
+      toLast: 'item' + this.data.list.length,
+      userInput:''
     })
     this.res();
   },
@@ -48,10 +49,37 @@ Page({
       userInput
     })
   },
+  getUserInf(){
+    var that = this
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function (res) {
+              var userImg = res.userInfo.avatarUrl
+              var user = false
+              that.setData({
+                user,
+                userImg
+              })
+            }
+          })
+        }
+        else{
+          var user = true
+          that.setData({
+            user
+          })
+        }
+      }
+    })
+  },
   data: {
     toLast: '',
     userInput: '',
-    list: []
+    list: [],
+    user: false,
+    userImg:''
   },
 
   /**
@@ -61,27 +89,29 @@ Page({
     this.setData({
       toLast: 'item' + this.data.list.length
     })
+    var that = this
     wx.getSetting({
       success(res) {
-        if (!res.authSetting['scope.record']) {
-          wx.authorize({
-            scope: 'scope.userInfo',
-            success() {
-              wx.getUserInfo()
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function(res) {
+              var userImg = res.userInfo.avatarUrl
+              var user = false
+              that.setData({
+                user,
+                userImg
+              })
             }
+          })
+        }else{
+          var user = true
+          that.setData({
+            user
           })
         }
       }
     })
-    // wx.getUserInfo({
-    //   success: function (res) {
-    //     console.log(res);
-    //     that.data.userInfo = res.userInfo;
-    //     that.setData({
-    //       userInfo: that.data.userInfo
-    //     })
-    //   }
-    // })
+
   },
 
   /**
